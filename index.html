@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Clark is a software engineer and instructor crafting polished, practical, modern web experiences."
+    />
+    <title>Clark | Software Engineer & Instructor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-bg" aria-hidden="true"></div>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="#hero" aria-label="Clark home">
+        <span class="brand-mark">C</span>
+        <span>Clark</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navMenu"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="nav-cta" href="mailto:clark@vibecoder.dev">
+        <span class="status-dot"></span>
+        Available
+      </a>
+    </nav>
+
+    <main>
+      <section id="hero" class="hero section-shell">
+        <div class="hero-content reveal visible">
+          <p class="eyebrow">Instructor • Full-Stack Developer • AI Explorer</p>
+          <h1>Hi, I'm Clark.</h1>
+          <p class="hero-kicker">
+            &lt;/ turning ideas into systems people actually use &gt;
+          </p>
+          <p class="hero-copy">
+            I build modern web experiences that blend clean design, practical
+            functionality, and smart technology. From AI-powered systems to
+            interactive platforms, I create projects that don't just look good —
+            they solve real problems.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore Projects</a>
+            <a class="btn btn-ghost" href="#contact">Let's Build Something</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Portfolio highlights">
+            <div>
+              <strong>Full-stack</strong>
+              <span>Web & AI Systems</span>
+            </div>
+            <div>
+              <strong>Instructor</strong>
+              <span>Tech & Programming</span>
+            </div>
+            <div>
+              <strong>Creative</strong>
+              <span>Design + Logic</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal visible reveal-delay-1">
+          <div class="profile-card tilt-card">
+            <div class="profile-image-wrap">
+              <img
+                class="profile-img profile-img-default"
+                src="assets/profile1.png"
+                alt="Clark professional profile illustration"
+                width="1024"
+                height="1536"
+                fetchpriority="high"
+              />
+              <video
+                class="profile-img profile-vid-hover"
+                src="assets/vid1.mp4"
+                muted
+                playsinline
+                loop
+                preload="none"
+                aria-hidden="true"
+              ></video>
+            </div>
+            <div class="profile-card-footer">
+              <span>System Developer</span>
+              <span>College Instructor</span>
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="scroll-cue"
+          href="#about"
+          aria-label="Scroll to about section"
+        >
+          <span></span>
+        </a>
+      </section>
+
+      <section id="about" class="section-shell section-pad">
+        <div class="about-grid">
+          <div class="about-carousel reveal">
+            <div class="about-carousel-track" id="aboutCarouselTrack">
+              <div class="about-carousel-slide active">
+                <img
+                  src="assets/img1.png"
+                  alt="Clark in a coding workspace"
+                  width="1024"
+                  height="1536"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="about-carousel-slide">
+                <img
+                  src="assets/img2.png"
+                  alt="Clark holding a laptop in a developer workspace"
+                  width="1024"
+                  height="1536"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <div class="about-carousel-dots" aria-label="Slide indicators">
+              <button
+                class="about-dot active"
+                data-slide="0"
+                aria-label="Go to slide 1"
+                type="button"
+              ></button>
+              <button
+                class="about-dot"
+                data-slide="1"
+                aria-label="Go to slide 2"
+                type="button"
+              ></button>
+            </div>
+            <div class="about-carousel-footer">
+              <span>System Developer</span>
+              <span>College Instructor</span>
+            </div>
+          </div>
+
+          <div class="about-right reveal reveal-delay-1">
+            <div class="about-heading">
+              <p class="eyebrow">// 01 - About Me</p>
+              <h2>
+                Building systems with <span>purpose</span> and creativity.
+              </h2>
+            </div>
+            <div class="about-card glass-card">
+              <p>
+                I'm Clark, a full-stack developer and Information System
+                instructor passionate about building systems that are both
+                functional and meaningful. I enjoy creating modern web
+                experiences that combine clean design, smart technology, and
+                practical usability.
+              </p>
+              <p>
+                From AI-powered applications to interactive platforms and
+                academic systems, I focus on building projects that solve real
+                problems while still feeling intuitive and polished for users.
+              </p>
+
+              <div class="tag-cloud" aria-label="Core strengths">
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>React</span>
+                <span>Django</span>
+                <span>Next.js</span>
+                <span>UI/UX</span>
+                <span>AI Integration</span>
+                <span>REST APIs</span>
+                <span>Teaching</span>
+                <span>Responsive Design</span>
+                <span>VibeCoding</span>
+                <span>MySQL</span>
+                <span>Supabase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section-shell section-pad">
+        <div class="section-heading section-heading-center reveal">
+          <p class="eyebrow">// 02 - Capabilities</p>
+          <h2>Technical <span>Expertise</span></h2>
+          <p class="section-intro">
+            Combining modern development, system design, teaching, and
+            AI-powered solutions to build practical and user-focused digital
+            experiences.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-icon">FE</div>
+            <h3>Frontend Development</h3>
+            <p>
+              Building responsive and modern interfaces using React, Next.js,
+              JavaScript, and clean component-based architecture.
+            </p>
+            <div class="skill-meter" aria-hidden="true">
+              <span data-width="90"></span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal reveal-delay-1">
+            <div class="skill-icon">UI</div>
+            <h3>UI/UX Design</h3>
+            <p>
+              Designing intuitive user experiences with clear layouts, visual
+              consistency, and accessible interaction patterns.
+            </p>
+            <div class="skill-meter" aria-hidden="true">
+              <span data-width="85"></span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal reveal-delay-2">
+            <div class="skill-icon">ED</div>
+            <h3>Teaching & Mentorship</h3>
+            <p>
+              Delivering technical concepts in a practical and engaging way
+              through hands-on learning and real-world examples.
+            </p>
+            <div class="skill-meter" aria-hidden="true">
+              <span data-width="94"></span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">BE</div>
+            <h3>Backend Development</h3>
+            <p>
+              Developing APIs, authentication systems, databases, and scalable
+              server-side logic using Django and Node.js.
+            </p>
+            <div class="skill-meter" aria-hidden="true">
+              <span data-width="82"></span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal reveal-delay-1">
+            <div class="skill-icon">AI</div>
+            <h3>AI Integration</h3>
+            <p>
+              Integrating AI tools and language models into applications to
+              create smarter workflows and interactive user experiences.
+            </p>
+            <div class="skill-meter" aria-hidden="true">
+              <span data-width="92"></span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal reveal-delay-2">
+            <div class="skill-icon">CL</div>
+            <h3>Deployment & Cloud</h3>
+            <p>
+              Managing deployment workflows, environments, and cloud platforms
+              for reliable and production-ready applications.
+            </p>
+            <div class="skill-meter" aria-hidden="true">
+              <span data-width="91"></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section-shell section-pad">
+        <div class="projects-header reveal">
+          <div class="section-heading">
+            <p class="eyebrow">// 03 - Selected Work</p>
+            <h2>Featured <span>Projects</span></h2>
+          </div>
+
+          <div
+            class="project-filters"
+            role="tablist"
+            aria-label="Filter projects by category"
+          >
+            <button
+              class="filter-btn active"
+              data-filter="recent"
+              role="tab"
+              aria-selected="true"
+              type="button"
+            >
+              <span class="filter-dot"></span>Recent
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="chatbots"
+              role="tab"
+              aria-selected="false"
+              type="button"
+            >
+              <span class="filter-dot"></span>Chatbots
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="crud"
+              role="tab"
+              aria-selected="false"
+              type="button"
+            >
+              <span class="filter-dot"></span>CRUD
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="detection"
+              role="tab"
+              aria-selected="false"
+              type="button"
+            >
+              <span class="filter-dot"></span>Detection
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="web"
+              role="tab"
+              aria-selected="false"
+              type="button"
+            >
+              <span class="filter-dot"></span>Web Apps
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="mobile"
+              role="tab"
+              aria-selected="false"
+              type="button"
+            >
+              <span class="filter-dot"></span>Mobile
+            </button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- RECENT -->
+          <article
+            class="project-card"
+            data-category="recent chatbots"
+            data-aos
+          >
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/chucksgpt.png"
+                alt="ChucksGPT preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">Chatbot</p>
+                <span class="project-badge recent-badge">Recent</span>
+              </div>
+              <h3>ChucksGPT</h3>
+              <p>
+                A conversational AI assistant with mood-aware responses, context
+                memory, and a sleek chat interface.
+              </p>
+              <div class="project-stack">
+                <span>React</span><span>Claude API</span><span>Node</span
+                ><span>Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://chucksgpt.vercel.app/"
+                  aria-label="Visit ChucksGPT"
+                  class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="recent crud" data-aos>
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/taskflow.png"
+                alt="TaskFlow Manager preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">CRUD</p>
+                <span class="project-badge recent-badge">Recent</span>
+              </div>
+              <h3>TaskFlow Manager</h3>
+              <p>
+                A full-featured task management system with real-time sync,
+                role-based access, and a clean dashboard.
+              </p>
+              <div class="project-stack">
+                <span>Next.js</span><span>Supabase</span><span>TypeScript</span
+                ><span>Prisma</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="#"
+                  aria-label="Visit TaskFlow Manager"
+                  class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card"
+            data-category="recent detection"
+            data-aos
+          >
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/facetrack.png"
+                alt="FaceTrack Vision preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">Detection</p>
+                <span class="project-badge recent-badge">Recent</span>
+              </div>
+              <h3>FaceTrack Vision</h3>
+              <p>
+                Real-time face detection and emotion recognition system using
+                computer vision and a live webcam feed.
+              </p>
+              <div class="project-stack">
+                <span>Python</span><span>OpenCV</span><span>TensorFlow</span
+                ><span>Flask</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="#"
+                  aria-label="Visit FaceTrack Vision"
+                  class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- CHATBOTS -->
+          <article class="project-card" data-category="chatbots" data-aos>
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/bisu_rag.png"
+                alt="NYEL | BISU Faculty Manual Assistant preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">Chatbot</p>
+              </div>
+              <h3>NYEL | BISU Faculty Manual Assistant</h3>
+              <p>
+                An AI-powered customer support bot with FAQ training, ticket
+                escalation, and multi-language support.
+              </p>
+              <div class="project-stack">
+                <span>OpenAI</span><span>Pinecone</span><span>Express</span
+                ><span>React</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://bisu-faculty-manual-chatbot-rag-pow.vercel.app/"
+                  aria-label="Visit NYEL | BISU Faculty Manual Assistant"
+                  class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="chatbots" data-aos>
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/neuraclark.png"
+                alt="NeuraClark preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">Chatbot</p>
+              </div>
+              <h3>NeuraClark</h3>
+              <p>
+                An AI-powered customer support bot with FAQ training, ticket
+                escalation, and multi-language support.
+              </p>
+              <div class="project-stack">
+                <span>OpenAI</span><span>Pinecone</span><span>Express</span
+                ><span>React</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://chatbot-ni-clark.vercel.app/auth/login"
+                  aria-label="Visit NeuraClark"
+                  class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- CRUD -->
+          <article class="project-card" data-category="crud" data-aos>
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/inventoryos.png"
+                alt="InventoryOS preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">CRUD</p>
+              </div>
+              <h3>InventoryOS</h3>
+              <p>
+                A robust inventory management system with barcode scanning,
+                stock alerts, and detailed reporting.
+              </p>
+              <div class="project-stack">
+                <span>Vue 3</span><span>Laravel</span><span>MySQL</span
+                ><span>Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a href="#" aria-label="Visit InventoryOS" class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- DETECTION -->
+          <article class="project-card" data-category="detection" data-aos>
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/objectlens.png"
+                alt="ObjectLens preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">Detection</p>
+              </div>
+              <h3>ObjectLens</h3>
+              <p>
+                YOLO-powered object detection app that identifies and tracks
+                multiple objects from video streams in real time.
+              </p>
+              <div class="project-stack">
+                <span>YOLO</span><span>Python</span><span>FastAPI</span
+                ><span>React</span>
+              </div>
+              <div class="project-links">
+                <a href="#" aria-label="Visit ObjectLens" class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- WEB APPS -->
+          <article class="project-card" data-category="web" data-aos>
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/eveningdashboard.png"
+                alt="Evening Dashboard preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">Web App</p>
+              </div>
+              <h3>Evening Dashboard</h3>
+              <p>
+                Analytics platform with a calm evening aesthetic, built to make
+                scanning data feel clear and less stressful.
+              </p>
+              <div class="project-stack">
+                <span>Vue 3</span><span>D3.js</span><span>Supabase</span
+                ><span>Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="#"
+                  aria-label="Visit Evening Dashboard"
+                  class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- MOBILE -->
+          <article class="project-card" data-category="mobile" data-aos>
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/nightowl.png"
+                alt="NightOwl Social preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">Mobile</p>
+              </div>
+              <h3>NightOwl Social</h3>
+              <p>
+                A social app for night-mode creators: late-night builds, focused
+                sessions, and community momentum.
+              </p>
+              <div class="project-stack">
+                <span>React Native</span><span>Expo</span><span>Firebase</span
+                ><span>RevenueCat</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="#"
+                  aria-label="Visit NightOwl Social"
+                  class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section-shell section-pad">
+        <div class="section-heading section-heading-center reveal">
+          <p class="eyebrow">// 04 - Experience &amp; Growth</p>
+          <h2>Building Through <span>Experience</span></h2>
+          <p class="section-intro">
+            A journey shaped by software development, teaching, continuous
+            learning, and creating systems that solve real-world problems.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <p class="timeline-meta">Development</p>
+            <h3>Full-Stack Development</h3>
+            <p>
+              Developing modern web applications with responsive interfaces,
+              backend systems, APIs, authentication, and practical deployment
+              workflows.
+            </p>
+          </article>
+
+          <article class="timeline-item reveal reveal-delay-1">
+            <span class="timeline-dot"></span>
+            <p class="timeline-meta">Education</p>
+            <h3>Information System Instructor</h3>
+            <p>
+              Teaching programming, system design, and technical concepts
+              through hands-on activities, real-world examples, and
+              student-centered learning.
+            </p>
+          </article>
+
+          <article class="timeline-item reveal reveal-delay-2">
+            <span class="timeline-dot"></span>
+            <p class="timeline-meta">Continuous Growth</p>
+            <h3>Certifications &amp; Learning</h3>
+            <p>
+              Continuously improving across frontend development, backend
+              systems, AI integration, cloud deployment, and emerging
+              technologies.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section-shell section-pad contact-section">
+        <div class="contact-grid">
+          <div class="contact-copy reveal">
+            <p class="eyebrow">// 05 - Get In Touch</p>
+            <h2>Let's build something that feels right.</h2>
+            <p>
+              Got a project, an idea, or a half-built concept that needs a
+              sharper interface? Send a note and let's turn it into something
+              polished.
+            </p>
+
+            <div class="social-links" aria-label="Social links">
+              <a href="mailto:clark@vibecoder.dev">Email</a>
+              <a href="#">LinkedIn</a>
+              <a href="#">GitHub</a>
+              <a href="#">Twitter/X</a>
+            </div>
+          </div>
+
+          <form
+            class="contact-form glass-card reveal reveal-delay-1"
+            action="mailto:clark@vibecoder.dev"
+            method="post"
+            enctype="text/plain"
+          >
+            <label>
+              <span>Name</span>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                autocomplete="name"
+                required
+              />
+            </label>
+            <label>
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </label>
+            <label>
+              <span>Project</span>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Tell me what you want to build"
+                required
+              ></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <span>&copy; 2026 Clark. All vibes reserved.</span>
+      <span>Built with care, code, and late-night energy.</span>
+      <span>v4.0.0</span>
+    </footer>
+
+    <div class="palette-switcher" id="paletteSwitcher">
+      <div
+        class="palette-panel"
+        id="palettePanel"
+        aria-label="Color palette options"
+      >
+        <button
+          class="palette-option active"
+          type="button"
+          data-palette="default"
+        >
+          <span class="swatches">
+            <i style="background: #0b0f17"></i>
+            <i style="background: #4fd1c5"></i>
+            <i style="background: #a78bfa"></i>
+          </span>
+          <span>Midnight</span>
+        </button>
+        <button class="palette-option" type="button" data-palette="peacock">
+          <span class="swatches">
+            <i style="background: #101827"></i>
+            <i style="background: #38bdf8"></i>
+            <i style="background: #86efac"></i>
+          </span>
+          <span>Peacock</span>
+        </button>
+      </div>
+      <button
+        class="palette-toggle"
+        id="paletteToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="palettePanel"
+        aria-label="Switch color palette"
+      ></button>
+    </div>
+
+    <button
+      class="scroll-top"
+      id="scrollTop"
+      type="button"
+      aria-label="Scroll to top"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M12 5 5.5 11.5l1.4 1.4 4.1-4.1V20h2V8.8l4.1 4.1 1.4-1.4L12 5Z"
+        ></path>
+      </svg>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
