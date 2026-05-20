@@ -23,7 +23,7 @@
 
     <nav class="site-nav" aria-label="Primary navigation">
       <a class="nav-brand" href="#hero" aria-label="Clark home">
-        <span class="brand-mark">C</span>
+        <img src="assets/clarklogo.png" alt="Clark logo" class="brand-logo" width="32" height="32" />
         <span>Clark</span>
       </a>
 
@@ -738,18 +738,19 @@
         <div class="contact-grid">
           <div class="contact-copy reveal">
             <p class="eyebrow">// 05 - Get In Touch</p>
-            <h2>Let's build something that feels right.</h2>
+            <h2>Let's build something meaningful.</h2>
             <p>
-              Got a project, an idea, or a half-built concept that needs a
-              sharper interface? Send a note and let's turn it into something
-              polished.
+              Have a project, an idea, or a system you want to improve? Whether
+              it's a web application, AI-powered solution, academic platform, or
+              digital experience, let's turn concepts into practical and
+              impactful technology.
             </p>
 
             <div class="social-links" aria-label="Social links">
               <a href="mailto:clark@vibecoder.dev">Email</a>
               <a href="#">LinkedIn</a>
               <a href="#">GitHub</a>
-              <a href="#">Twitter/X</a>
+              <a href="#">Facebook</a>
             </div>
           </div>
 
@@ -795,10 +796,62 @@
     </main>
 
     <footer class="site-footer section-shell">
-      <span>&copy; 2026 Clark. All vibes reserved.</span>
-      <span>Built with care, code, and late-night energy.</span>
-      <span>v4.0.0</span>
+      <span>&copy; 2026 Clark. All rights reserved.</span>
+      <span>Building systems. Teaching minds. Exploring technology.</span>
+      <span>v2.0.0</span>
     </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbotWidget">
+      <!-- Chat window -->
+      <div class="chatbot-window" id="chatbotWindow" aria-live="polite" aria-label="Chat with ChucksGPT">
+        <div class="chatbot-header">
+          <img src="assets/chucks.png" alt="Chucks avatar" class="chatbot-header-avatar" />
+          <div class="chatbot-header-info">
+            <span class="chatbot-header-name">ChucksGPT</span>
+            <span class="chatbot-header-status"><i></i>Online</span>
+          </div>
+          <button class="chatbot-close" id="chatbotClose" type="button" aria-label="Close chat">
+            <svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+ 
+        <div class="chatbot-messages" id="chatbotMessages">
+          <div class="chatbot-msg bot">
+            <img src="assets/chucks.png" alt="Chucks" class="chatbot-msg-avatar" />
+            <div class="chatbot-bubble">Hey! 👋 I'm ChucksGPT — Clark's personal AI assistant. Ask me anything about his work, skills, or projects!</div>
+          </div>
+        </div>
+ 
+        <div class="chatbot-suggestions" id="chatbotSuggestions">
+          <button class="chatbot-chip" type="button">What can Clark build?</button>
+          <button class="chatbot-chip" type="button">Tell me about his projects</button>
+          <button class="chatbot-chip" type="button">Is he available for hire?</button>
+          <button class="chatbot-chip" type="button">What's his tech stack?</button>
+        </div>
+ 
+        <div class="chatbot-input-row">
+          <input
+            class="chatbot-input"
+            id="chatbotInput"
+            type="text"
+            placeholder="Ask me anything…"
+            autocomplete="off"
+            maxlength="300"
+          />
+          <button class="chatbot-send" id="chatbotSend" type="button" aria-label="Send message">
+            <svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </button>
+        </div>
+      </div>
+ 
+      <!-- Trigger button -->
+      <button class="chatbot-trigger" id="chatbotTrigger" type="button" aria-label="Open chat with ChucksGPT" aria-expanded="false">
+        <img src="assets/chucks.png" alt="ChucksGPT" class="chatbot-trigger-img" />
+        <span class="chatbot-trigger-pulse"></span>
+        <span class="chatbot-trigger-badge">1</span>
+      </button>
+    </div>
 
     <div class="palette-switcher" id="paletteSwitcher">
       <div
