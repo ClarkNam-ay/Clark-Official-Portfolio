@@ -7,7 +7,8 @@
       name="description"
       content="Clark is a software engineer and instructor crafting polished, practical, modern web experiences."
     />
-    <title>Clark | Software Engineer & Instructor</title>
+    <title>Clark | System Developer & College Instructor</title>
+    <link rel="shortcut icon" href="assets/clarklogo.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +24,13 @@
 
     <nav class="site-nav" aria-label="Primary navigation">
       <a class="nav-brand" href="#hero" aria-label="Clark home">
-        <img src="assets/clarklogo.png" alt="Clark logo" class="brand-logo" width="32" height="32" />
+        <img
+          src="assets/clarklogo.png"
+          alt="Clark logo"
+          class="brand-logo"
+          width="32"
+          height="32"
+        />
         <span>Clark</span>
       </a>
 
@@ -620,8 +627,8 @@
           <article class="project-card" data-category="web" data-aos>
             <div class="project-visual project-img-wrap">
               <img
-                src="assets/eveningdashboard.png"
-                alt="Evening Dashboard preview"
+                src="assets/chess.png"
+                alt="Chess App preview"
                 class="project-img"
                 loading="lazy"
                 decoding="async"
@@ -631,10 +638,10 @@
               <div class="project-meta">
                 <p class="project-num">Web App</p>
               </div>
-              <h3>Evening Dashboard</h3>
+              <h3>Chess App</h3>
               <p>
-                Analytics platform with a calm evening aesthetic, built to make
-                scanning data feel clear and less stressful.
+                A web-based chess application with real-time multiplayer
+                functionality and game analysis features.
               </p>
               <div class="project-stack">
                 <span>Vue 3</span><span>D3.js</span><span>Supabase</span
@@ -642,8 +649,110 @@
               </div>
               <div class="project-links">
                 <a
-                  href="#"
-                  aria-label="Visit Evening Dashboard"
+                  href="https://chess-tools.vercel.app/"
+                  aria-label="Visit Chess App"
+                  class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web" data-aos>
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/bingo.png"
+                alt="Bingo App preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">Web App</p>
+              </div>
+              <h3>Bingo App</h3>
+              <p>
+                A web-based bingo application with real-time multiplayer
+                functionality and game analysis features.
+              </p>
+              <div class="project-stack">
+                <span>Vue 3</span><span>D3.js</span><span>Supabase</span
+                ><span>Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://bingo-games.vercel.app/"
+                  aria-label="Visit Bingo App"
+                  class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web" data-aos>
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/clark_portfolio.png"
+                alt="Clark Portfolio preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">Web App</p>
+              </div>
+              <h3>Clark Portfolio</h3>
+              <p>
+                A web-based bingo application with real-time multiplayer
+                functionality and game analysis features.
+              </p>
+              <div class="project-stack">
+                <span>Vue 3</span><span>D3.js</span><span>Supabase</span
+                ><span>Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://personal-website-swart-chi.vercel.app/"
+                  aria-label="Visit Clark Portfolio"
+                  class="project-visit"
+                  >↗ Visit</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web" data-aos>
+            <div class="project-visual project-img-wrap">
+              <img
+                src="assets/loisa_portfolio.png"
+                alt="Loisa Portfolio preview"
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <p class="project-num">Web App</p>
+              </div>
+              <h3>Loisa Portfolio</h3>
+              <p>
+                A web-based bingo application with real-time multiplayer
+                functionality and game analysis features.
+              </p>
+              <div class="project-stack">
+                <span>Vue 3</span><span>D3.js</span><span>Supabase</span
+                ><span>Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://loisa-website.vercel.app/"
+                  aria-label="Visit Loisa Portfolio"
                   class="project-visit"
                   >↗ Visit</a
                 >
@@ -804,32 +913,68 @@
     <!-- Chatbot Widget -->
     <div class="chatbot-widget" id="chatbotWidget">
       <!-- Chat window -->
-      <div class="chatbot-window" id="chatbotWindow" aria-live="polite" aria-label="Chat with ChucksGPT">
+      <div
+        class="chatbot-window"
+        id="chatbotWindow"
+        aria-live="polite"
+        aria-label="Chat with ChucksGPT"
+      >
         <div class="chatbot-header">
-          <img src="assets/chucks.png" alt="Chucks avatar" class="chatbot-header-avatar" />
+          <img
+            src="assets/chucks.png"
+            alt="Chucks avatar"
+            class="chatbot-header-avatar"
+          />
           <div class="chatbot-header-info">
             <span class="chatbot-header-name">ChucksGPT</span>
             <span class="chatbot-header-status"><i></i>Online</span>
           </div>
-          <button class="chatbot-close" id="chatbotClose" type="button" aria-label="Close chat">
-            <svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <button
+            class="chatbot-close"
+            id="chatbotClose"
+            type="button"
+            aria-label="Close chat"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18 6 6 18M6 6l12 12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
           </button>
         </div>
- 
+
         <div class="chatbot-messages" id="chatbotMessages">
           <div class="chatbot-msg bot">
-            <img src="assets/chucks.png" alt="Chucks" class="chatbot-msg-avatar" />
-            <div class="chatbot-bubble">Hey! 👋 I'm ChucksGPT — Clark's personal AI assistant. Ask me anything about his work, skills, or projects!</div>
+            <img
+              src="assets/chucks.png"
+              alt="Chucks"
+              class="chatbot-msg-avatar"
+            />
+            <div class="chatbot-bubble">
+              Hey! 👋 I'm ChucksGPT — Clark's personal AI assistant. Ask me
+              anything about his work, skills, or projects!
+            </div>
           </div>
         </div>
- 
+
         <div class="chatbot-suggestions" id="chatbotSuggestions">
-          <button class="chatbot-chip" type="button">What can Clark build?</button>
-          <button class="chatbot-chip" type="button">Tell me about his projects</button>
-          <button class="chatbot-chip" type="button">Is he available for hire?</button>
-          <button class="chatbot-chip" type="button">What's his tech stack?</button>
+          <button class="chatbot-chip" type="button">
+            What can Clark build?
+          </button>
+          <button class="chatbot-chip" type="button">
+            Tell me about his projects
+          </button>
+          <button class="chatbot-chip" type="button">
+            Is he available for hire?
+          </button>
+          <button class="chatbot-chip" type="button">
+            What's his tech stack?
+          </button>
         </div>
- 
+
         <div class="chatbot-input-row">
           <input
             class="chatbot-input"
@@ -839,15 +984,39 @@
             autocomplete="off"
             maxlength="300"
           />
-          <button class="chatbot-send" id="chatbotSend" type="button" aria-label="Send message">
-            <svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <button
+            class="chatbot-send"
+            id="chatbotSend"
+            type="button"
+            aria-label="Send message"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+            </svg>
           </button>
         </div>
       </div>
- 
+
       <!-- Trigger button -->
-      <button class="chatbot-trigger" id="chatbotTrigger" type="button" aria-label="Open chat with ChucksGPT" aria-expanded="false">
-        <img src="assets/chucks.png" alt="ChucksGPT" class="chatbot-trigger-img" />
+      <button
+        class="chatbot-trigger"
+        id="chatbotTrigger"
+        type="button"
+        aria-label="Open chat with ChucksGPT"
+        aria-expanded="false"
+      >
+        <img
+          src="assets/chucks.png"
+          alt="ChucksGPT"
+          class="chatbot-trigger-img"
+        />
         <span class="chatbot-trigger-pulse"></span>
         <span class="chatbot-trigger-badge">1</span>
       </button>
