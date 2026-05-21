@@ -7,7 +7,7 @@
       name="description"
       content="Clark is a software engineer and instructor crafting polished, practical, modern web experiences."
     />
-    <title>Clark | System Developer & College Instructor</title>
+    <title>Clark Portfolio</title>
     <link rel="shortcut icon" href="assets/whitelogo.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -233,6 +233,9 @@
 
               <div class="tag-cloud" aria-label="Core strengths">
                 <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Model Training</span>
+                <span>AI Development</span>
                 <span>JavaScript</span>
                 <span>PHP</span>
                 <span>React</span>
@@ -996,6 +999,155 @@
           <div class="cert-lightbox-content">
             <img id="certLightboxImg" src="" alt="" />
             <p id="certLightboxName"></p>
+          </div>
+        </div>
+
+        <!-- Thesis -->
+        <div class="certs-heading reveal">
+          <p class="eyebrow">// Research & Innovation</p>
+          <h3>Research & &amp; <span>Development</span></h3>
+        </div>
+
+        <div class="thesis-card glass-card reveal">
+          <div class="thesis-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+          </div>
+          <div class="thesis-body">
+            <span class="thesis-tag"
+              >Undergraduate Thesis • AI Development</span
+            >
+            <h4 class="thesis-title">
+              Streamlining Faculty Support: BISU Faculty Manual Chatbot
+            </h4>
+            <p class="thesis-desc">
+              Developed an AI-powered chatbot designed to help BISU faculty
+              efficiently access policy guidelines and procedural information
+              from institutional faculty manuals.
+            </p>
+            <p class="thesis-desc">
+              The system utilized a custom-trained machine learning model
+              developed specifically for the study, aiming to improve
+              information accessibility, reduce manual searching, and strengthen
+              institutional support efficiency.
+            </p>
+            <div class="thesis-actions">
+              <button
+                class="btn btn-primary thesis-view-btn"
+                id="thesisViewBtn"
+                type="button"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="15"
+                  height="15"
+                  aria-hidden="true"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                View Document
+              </button>
+              <a
+                class="btn btn-ghost thesis-dl-btn"
+                href="assets/BISUFacultyManualChatbot.pdf"
+                download="Streamlining Faculty Support - BISU Faculty Manual Chatbot.pdf"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="15"
+                  height="15"
+                  aria-hidden="true"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PDF viewer modal -->
+        <div
+          class="pdf-modal"
+          id="pdfModal"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Thesis document viewer"
+        >
+          <div class="pdf-modal-inner">
+            <div class="pdf-modal-header">
+              <span class="pdf-modal-title"
+                >Streamlining Faculty Support: BISU Faculty Manual Chatbot</span
+              >
+              <div class="pdf-modal-controls">
+                <a
+                  class="pdf-modal-dl"
+                  href="assets/BISUFacultyManualChatbot.pdf"
+                  download="Streamlining Faculty Support - BISU Faculty Manual Chatbot.pdf"
+                  aria-label="Download PDF"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="15"
+                    height="15"
+                    aria-hidden="true"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download
+                </a>
+                <button
+                  class="pdf-modal-close"
+                  id="pdfModalClose"
+                  type="button"
+                  aria-label="Close viewer"
+                >
+                  &times;
+                </button>
+              </div>
+            </div>
+            <div class="pdf-modal-body">
+              <embed
+                id="pdfFrame"
+                type="application/pdf"
+                width="100%"
+                height="100%"
+              />
+            </div>
           </div>
         </div>
       </section>

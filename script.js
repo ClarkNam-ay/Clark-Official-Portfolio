@@ -638,3 +638,51 @@ paletteOptions.forEach((option) => {
     if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
   });
 })();
+
+// ============================================================
+//  PDF VIEWER MODAL — Thesis
+// ============================================================
+(function () {
+  const modal    = document.getElementById('pdfModal');
+  const closeBtn = document.getElementById('pdfModalClose');
+  const viewBtn  = document.getElementById('thesisViewBtn');
+  const frame    = document.getElementById('pdfFrame');
+  const PDF_SRC  = 'assets/BISUFacultyManualChatbot.pdf';
+
+  if (!modal || !viewBtn) return;
+
+  function openModal() {
+
+  // Browser native PDF toolbar
+  frame.src =
+    PDF_SRC +
+    "#toolbar=1&navpanes=0&scrollbar=1&view=FitH";
+
+  modal.style.display = 'grid';
+  void modal.offsetWidth;
+
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    modal.addEventListener('transitionend', () => {
+      if (!modal.classList.contains('open')) modal.style.display = 'none';
+    }, { once: true });
+  }
+
+  modal.style.display = 'none';
+
+  viewBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+})();
