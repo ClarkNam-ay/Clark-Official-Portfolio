@@ -464,17 +464,24 @@ paletteOptions.forEach((option) => {
 
   function openChat() {
     isOpen = true;
-    window_.classList.add("open");
-    trigger.setAttribute("aria-expanded", "true");
-    // Hide badge
-    if (badge) badge.classList.add("hidden");
+    // Step 1: make it visible in DOM so transition can play
+    window_.style.display = 'flex';
+    // Step 2: force reflow then add class to trigger CSS transition
+    void window_.offsetWidth;
+    window_.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+    if (badge) badge.classList.add('hidden');
     input.focus();
   }
 
   function closeChat() {
     isOpen = false;
-    window_.classList.remove("open");
-    trigger.setAttribute("aria-expanded", "false");
+    window_.classList.remove('open');
+    trigger.setAttribute('aria-expanded', 'false');
+    // Hide from DOM after transition ends so it never blocks clicks
+    window_.addEventListener('transitionend', () => {
+      if (!isOpen) window_.style.display = 'none';
+    }, { once: true });
   }
 
   trigger.addEventListener("click", () => (isOpen ? closeChat() : openChat()));
