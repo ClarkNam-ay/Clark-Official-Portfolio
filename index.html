@@ -8,11 +8,7 @@
       content="Clark is a software engineer and instructor crafting polished, practical, modern web experiences."
     />
     <title>Clark | System Developer & College Instructor</title>
-    <link
-      rel="shortcut icon"
-      href="assets/white_logo.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="assets/whitelogo.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -877,6 +873,131 @@
             </p>
           </article>
         </div>
+
+        <!-- Certificates -->
+        <div class="certs-heading reveal">
+          <p class="eyebrow">// Certificates</p>
+          <h3>Licenses &amp; <span>Certifications</span></h3>
+        </div>
+
+        <div class="certs-grid">
+          <article class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <img
+                src="assets/cert1IEEE.png"
+                alt="Certificate 1"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="cert-overlay">
+                <span class="cert-zoom">⤢</span>
+              </div>
+            </div>
+            <p class="cert-name">
+              International Conference Presentation Presented research on "BISU
+              Faculty Manual Chatbot" IEEE • 2025
+            </p>
+          </article>
+
+          <article class="cert-card reveal reveal-delay-1">
+            <div class="cert-img-wrap">
+              <img
+                src="assets/cert2OJT.jpg"
+                alt="Certificate 2"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="cert-overlay">
+                <span class="cert-zoom">⤢</span>
+              </div>
+            </div>
+            <p class="cert-name">
+              Professional Training Experience – Completed 320-Hour OJT at FCB
+              (2024)
+            </p>
+          </article>
+
+          <article class="cert-card reveal reveal-delay-2">
+            <div class="cert-img-wrap">
+              <img
+                src="assets/cert3.png"
+                alt="Certificate 3"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="cert-overlay">
+                <span class="cert-zoom">⤢</span>
+              </div>
+            </div>
+            <p class="cert-name">Certificate 3</p>
+          </article>
+
+          <article class="cert-card reveal">
+            <div class="cert-img-wrap">
+              <img
+                src="assets/cert4.png"
+                alt="Certificate 4"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="cert-overlay">
+                <span class="cert-zoom">⤢</span>
+              </div>
+            </div>
+            <p class="cert-name">Certificate 4</p>
+          </article>
+
+          <article class="cert-card reveal reveal-delay-1">
+            <div class="cert-img-wrap">
+              <img
+                src="assets/cert5.png"
+                alt="Certificate 5"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="cert-overlay">
+                <span class="cert-zoom">⤢</span>
+              </div>
+            </div>
+            <p class="cert-name">Certificate 5</p>
+          </article>
+
+          <article class="cert-card reveal reveal-delay-2">
+            <div class="cert-img-wrap">
+              <img
+                src="assets/cert6.png"
+                alt="Certificate 6"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="cert-overlay">
+                <span class="cert-zoom">⤢</span>
+              </div>
+            </div>
+            <p class="cert-name">Certificate 6</p>
+          </article>
+        </div>
+
+        <!-- Lightbox -->
+        <div
+          class="cert-lightbox"
+          id="certLightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Certificate viewer"
+        >
+          <button
+            class="cert-lightbox-close"
+            id="certLightboxClose"
+            aria-label="Close"
+          >
+            &times;
+          </button>
+          <div class="cert-lightbox-content">
+            <img id="certLightboxImg" src="" alt="" />
+            <p id="certLightboxName"></p>
+          </div>
+        </div>
       </section>
 
       <section id="contact" class="section-shell section-pad contact-section">
@@ -1002,7 +1123,11 @@
 
             <div class="cf-status" id="cfStatus" aria-live="polite"></div>
 
-            <button class="btn btn-primary cf-submit" id="cfSubmit" type="submit">
+            <button
+              class="btn btn-primary cf-submit"
+              id="cfSubmit"
+              type="submit"
+            >
               <span class="cf-btn-text">Send Message</span>
               <span class="cf-btn-spinner" aria-hidden="true"></span>
             </button>

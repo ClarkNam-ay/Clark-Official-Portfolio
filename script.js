@@ -590,3 +590,51 @@ paletteOptions.forEach((option) => {
     }
   });
 })();
+
+// ============================================================
+//  CERTIFICATE LIGHTBOX
+// ============================================================
+(function () {
+  const lightbox   = document.getElementById('certLightbox');
+  const lbImg      = document.getElementById('certLightboxImg');
+  const lbName     = document.getElementById('certLightboxName');
+  const closeBtn   = document.getElementById('certLightboxClose');
+  const cards      = document.querySelectorAll('.cert-card');
+
+  if (!lightbox || !cards.length) return;
+
+  function openLightbox(src, name) {
+    lbImg.src = src;
+    lbImg.alt = name;
+    lbName.textContent = name;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    // Clear src after transition so it doesn't flash
+    setTimeout(() => { lbImg.src = ''; }, 300);
+  }
+
+  cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const img  = card.querySelector('img');
+      const name = card.querySelector('.cert-name').textContent;
+      openLightbox(img.src, name);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+
+  // Click backdrop to close
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Escape key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  });
+})();
