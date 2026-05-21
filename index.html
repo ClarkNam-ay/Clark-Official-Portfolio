@@ -963,14 +963,14 @@
           </div>
 
           <form
+            id="contactForm"
             class="contact-form glass-card reveal reveal-delay-1"
-            action="mailto:clark@vibecoder.dev"
-            method="post"
-            enctype="text/plain"
+            novalidate
           >
             <label>
               <span>Name</span>
               <input
+                id="cf-name"
                 type="text"
                 name="name"
                 placeholder="Your name"
@@ -981,6 +981,7 @@
             <label>
               <span>Email</span>
               <input
+                id="cf-email"
                 type="email"
                 name="email"
                 placeholder="you@example.com"
@@ -991,13 +992,20 @@
             <label>
               <span>Project</span>
               <textarea
+                id="cf-message"
                 name="message"
                 rows="5"
                 placeholder="Tell me what you want to build"
                 required
               ></textarea>
             </label>
-            <button class="btn btn-primary" type="submit">Send Message</button>
+
+            <div class="cf-status" id="cfStatus" aria-live="polite"></div>
+
+            <button class="btn btn-primary cf-submit" id="cfSubmit" type="submit">
+              <span class="cf-btn-text">Send Message</span>
+              <span class="cf-btn-spinner" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </section>
@@ -1171,6 +1179,7 @@
       </svg>
     </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

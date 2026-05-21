@@ -465,23 +465,27 @@ paletteOptions.forEach((option) => {
   function openChat() {
     isOpen = true;
     // Step 1: make it visible in DOM so transition can play
-    window_.style.display = 'flex';
+    window_.style.display = "flex";
     // Step 2: force reflow then add class to trigger CSS transition
     void window_.offsetWidth;
-    window_.classList.add('open');
-    trigger.setAttribute('aria-expanded', 'true');
-    if (badge) badge.classList.add('hidden');
+    window_.classList.add("open");
+    trigger.setAttribute("aria-expanded", "true");
+    if (badge) badge.classList.add("hidden");
     input.focus();
   }
 
   function closeChat() {
     isOpen = false;
-    window_.classList.remove('open');
-    trigger.setAttribute('aria-expanded', 'false');
+    window_.classList.remove("open");
+    trigger.setAttribute("aria-expanded", "false");
     // Hide from DOM after transition ends so it never blocks clicks
-    window_.addEventListener('transitionend', () => {
-      if (!isOpen) window_.style.display = 'none';
-    }, { once: true });
+    window_.addEventListener(
+      "transitionend",
+      () => {
+        if (!isOpen) window_.style.display = "none";
+      },
+      { once: true },
+    );
   }
 
   trigger.addEventListener("click", () => (isOpen ? closeChat() : openChat()));
@@ -503,5 +507,86 @@ paletteOptions.forEach((option) => {
   // Close on outside click
   document.addEventListener("click", (e) => {
     if (isOpen && !e.target.closest(".chatbot-widget")) closeChat();
+  });
+})();
+
+// ============================================================
+//  CONTACT FORM — EmailJS
+// ============================================================
+(function () {
+  const PUBLIC_KEY = "H0pOOKrhvU_81LUuf";
+  const SERVICE_ID = "service_pjqnbfh";
+  const TEMPLATE_ID = "template_d486cei";
+
+  // Init EmailJS
+  if (typeof emailjs !== "undefined") {
+    emailjs.init({ publicKey: PUBLIC_KEY });
+  }
+
+  const form = document.getElementById("contactForm");
+  const submit = document.getElementById("cfSubmit");
+  const status = document.getElementById("cfStatus");
+  const btnText = submit?.querySelector(".cf-btn-text");
+
+  if (!form) return;
+
+  function setStatus(type, msg) {
+    status.className = `cf-status cf-status--${type}`;
+    status.textContent = msg;
+  }
+
+  function setLoading(loading) {
+    submit.disabled = loading;
+    submit.classList.toggle("loading", loading);
+    if (btnText) btnText.textContent = loading ? "Sending…" : "Send Message";
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("cf-name").value.trim();
+    const email = document.getElementById("cf-email").value.trim();
+    const message = document.getElementById("cf-message").value.trim();
+
+    // Basic validation
+    if (!name || !email || !message) {
+      setStatus("error", "Please fill in all fields.");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setStatus("error", "Please enter a valid email address.");
+      return;
+    }
+
+    if (typeof emailjs === "undefined") {
+      setStatus(
+        "error",
+        "Email service failed to load. Please try refreshing the page.",
+      );
+      return;
+    }
+
+    setLoading(true);
+    setStatus("", "");
+
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+        from_name: name,
+        from_email: email,
+        message: message,
+        reply_to: email,
+      });
+
+      setStatus("success", "✓ Message sent! I'll get back to you soon.");
+      form.reset();
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      setStatus(
+        "error",
+        "Something went wrong. Please try again or email me directly.",
+      );
+    } finally {
+      setLoading(false);
+    }
   });
 })();
